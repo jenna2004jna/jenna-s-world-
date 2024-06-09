@@ -1,0 +1,249 @@
+/* Base Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('doreamon.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+
+/* Header Styles */
+header {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    color: #333;
+    padding: 2rem 1rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #ff6b6b;
+}
+
+/* Navigation Styles */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    background-color: #ff6b6b;
+    color: white;
+}
+
+/* Header Title */
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* Section Styles */
+.section {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 2rem auto;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Welcome Message Styles */
+.welcome-message {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.welcome-message h3 {
+    font-size: 2rem;
+    margin: 0.5rem 0;
+}
+
+.welcome-message p {
+    font-size: 1.2rem;
+}
+
+.welcome-message button {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.welcome-message button:hover {
+    background-color: #e55555;
+}
+
+/* Carousel Styles */
+.carousel {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-image {
+    width: 100%;
+    display: none;
+}
+
+.carousel-image.active {
+    display: block;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+#prev-button {
+    left: 10px;
+}
+
+#next-button {
+    right: 10px;
+}
+
+.carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Recent Posts Styles */
+.recent-posts h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.recent-posts ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.recent-posts li {
+    background: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Blog Post Styles */
+.blog-post {
+    background: rgba(255, 255, 255, 0.8);
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Animated Blog Post Titles */
+.blog-post h2 {
+    position: relative;
+    display: inline-block;
+    font-size: 28px;
+    padding: 10px;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    background: linear-gradient(45deg, #ff6b6b, #ffa07a);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, color 0.3s;
+    cursor: pointer;
+}
+
+.blog-post h2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #ff6b6b, #ffa07a);
+    transform: translateZ(-10px);
+    opacity: 0.8;
+    z-index: -1;
+}
+
+.blog-post h2:hover {
+    transform: rotateY(20deg);
+    color: #ff6b6b;
+}
+
+/* General Content Styles */
+.blog-post p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #444;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-top: 3px solid #ff6b6b;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .section {
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    .blog-post h2 {
+        font-size: 24px;
+    }
+
+    .blog-post p {
+        font-size: 1rem;
+    }
+
+    .welcome-message h3 {
+        font-size: 1.5rem;
+    }
+
+    .welcome-message p {
+        font-size: 1rem;
+    }
+
+    .welcome-message button {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
